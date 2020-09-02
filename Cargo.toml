@@ -1,0 +1,25 @@
+[package]
+name = "file-limits"
+version = "0.1.0" # Also update `html_root_url` in lib.rs and README
+authors = ["Lzu Tao <taolzu@gmail.com>"]
+edition = "2018"
+exclude = [
+    "/.github",
+    "/HOW-TO-RELEASE.md",
+    "/todo.md",
+]
+license = "MIT"
+readme = "README.md"
+description = "testing file limits on macos"
+publish = false
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+all-features = true
+
+[features]
+default = []
+
+[dependencies]
+
+[dev-dependencies]
