@@ -8,7 +8,7 @@ fn main() {
         println!("{}",i);
 
         let mut fd = File::create(i.to_string()).unwrap(); 
-        fd.write_all(b"asdfasdfasdfa");
+        fd.write_all(b"asdfasdfasdfa").unwrap();
         a.push(fd);        
     }
 
