@@ -13,6 +13,7 @@ jobs:
     env:
       RUST_BACKTRACE: 1
     strategy:
+      fail-fast: false
       matrix:
         build: [linux64, linux32, macos, win64]
         include:
