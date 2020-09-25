@@ -15,7 +15,12 @@ fn main() {
         let mut stream = match TcpStream::connect(saddrs) {
             Ok(s) => s,
             Err(e) => {
-                panic!("raw: {:?}, kind: {:?}", e.raw_os_error(), e.kind());
+                panic!(
+                    "{:?}, raw: {:?}, kind: {:?}",
+                    e,
+                    e.raw_os_error(),
+                    e.kind()
+                );
             }
         };
         stream.flush().unwrap();
