@@ -9,7 +9,7 @@ fn main() {
         let mut stream = match TcpStream::connect(("example.com", 80)) {
             Ok(s) => s,
             Err(e) => {
-                panic!("raw: {:?}", e.raw_os_error());
+                panic!("raw: {:?}, kind: {:?}", e.raw_os_error(), e.kind());
             }
         };
         stream.flush().unwrap();
