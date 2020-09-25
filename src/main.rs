@@ -1,15 +1,14 @@
-use std::fs::File;
 use std::io::Write;
+use std::net::TcpStream;
 
 fn main() {
     let mut a = Vec::new();
     for i in 0..300 {
+        println!("{}", i);
 
-        println!("{}",i);
-
-        let mut fd = File::create(i.to_string()).unwrap(); 
-        fd.write_all(b"asdfasdfasdfa").unwrap();
-        a.push(fd);        
+        let mut stream = TcpStream::connect(("example.com", 80))?;
+        stream.flush().unwrap();
+        a.push(stream);
     }
 
     println!("finish")

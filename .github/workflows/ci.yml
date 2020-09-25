@@ -49,3 +49,4 @@ jobs:
       - run: |
           ulimit -n 16
           cargo run
+        shell: bash
