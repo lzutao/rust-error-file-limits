@@ -43,8 +43,8 @@ jobs:
         shell: bash
         if: matrix.build == 'linux32'
       - run: |
-          rustup toolchain install stable-${{ matrix.target }}
-          rustup default stable-${{ matrix.target }}
+          rustup toolchain install nightly-${{ matrix.target }}
+          rustup default nightly-${{ matrix.target }}
       - run: cargo build
       - run: |
           ulimit -n 16
