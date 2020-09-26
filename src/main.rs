@@ -4,7 +4,7 @@ use std::net::ToSocketAddrs;
 
 fn main() {
     let mut a = Vec::new();
-    let saddrs = ("example.com", 80)
+    let saddrs = ("example.example", 80)
         .to_socket_addrs()
         .unwrap()
         .next()

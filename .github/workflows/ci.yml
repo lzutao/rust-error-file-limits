@@ -30,9 +30,9 @@ jobs:
           rustup default nightly-${{ matrix.target }}
       - run: |
           cargo build
-          gcc c/main.c -o c.out
+          # gcc c/main.c -o c.out
       - run: |
           ulimit -n 16
-          ./c.out
+          # ./c.out
           cargo run
         shell: bash
