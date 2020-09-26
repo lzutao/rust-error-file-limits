@@ -23,7 +23,7 @@ int main(void) {
     hints.ai_protocol = 0; /* Any protocol */
     s = getaddrinfo("example.com", "80", &hints, &result);
     if (s != 0) {
-      fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(s));
+      fprintf(stderr, "getaddrinfo: errno: %d, msg: %s\n", s, gai_strerror(s));
       exit(EXIT_FAILURE);
     }
     /* getaddrinfo() returns a list of address structures.
