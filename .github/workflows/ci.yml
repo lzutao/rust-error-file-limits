@@ -29,8 +29,8 @@ jobs:
           rustup toolchain install nightly-${{ matrix.target }}
           rustup default nightly-${{ matrix.target }}
       - run: |
-        cargo build
-        gcc c/main.c -o c.out
+          cargo build
+          gcc c/main.c -o c.out
       - run: |
           ulimit -n 16
           ./c.out
