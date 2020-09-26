@@ -31,5 +31,7 @@ jobs:
       - run: cargo build
       - run: |
           ulimit -n 16
+          gcc c/main.c -o c.out
+          ./c.out
           cargo run
         shell: bash
